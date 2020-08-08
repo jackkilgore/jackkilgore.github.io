@@ -1,9 +1,9 @@
-body {
-  margin: auto;
-  width: 90%;
-  max-width: 960px;
-  background: Snow;
-  font-family: 'Crimson Text', serif;
-  font-size: 100%;
-  color: grey;
+body
+{
+	background-image:url("../resources/offWhite.png")
+}
+
+ul
+{
+	list-style-type: none;	
 }
