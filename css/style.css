@@ -1,11 +1,3 @@
-body
-{
-	/* background-image:url("../resources/offWhite.png")*/
-	background-color: rgb(32, 32, 33);
-	color: rgb(255, 255, 255);
-}
-
-
 a {color: hotpink;}
 
 /* unvisited link */
@@ -24,3 +16,16 @@ ul
 {
 	list-style-type: none;	
 }
+
+hr {
+  border: 1px solid white;
+  width: 100%;
+}
+
+body
+{
+	/* background-image:url("../resources/offWhite.png")*/
+	background-color: rgb(32, 32, 33);
+	color: rgb(255, 255, 255);
+}
+
