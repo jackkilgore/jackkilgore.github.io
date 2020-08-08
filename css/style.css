@@ -1,11 +1,24 @@
-html
+body
 {
-	background:url("../resources/offWhite.png") no-repeat center center fixed;
-	-webkit-background-size: cover;
-  	-moz-background-size: cover;
-  	-o-background-size: cover;
- 	background-size: cover;
+	/* background-image:url("../resources/offWhite.png")*/
+	background-color: rgb(32, 32, 33);
+	color: rgb(255, 255, 255);
 }
+
+
+a {color: hotpink;}
+
+/* unvisited link */
+a:link { color: blue; }  
+
+/* visited link */ 
+a:visited { color: blue; }  
+
+/* mouse over link */ 
+a:hover { color: darkslateblue; }  
+
+/* selected link */ 
+a:active { color: darkslateblue;}
 
 ul
 {
