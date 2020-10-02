@@ -1,16 +1,16 @@
-a {color: hotpink;}
+a {color:hotpink; }
 
 /* unvisited link */
-a:link { color: blue; }  
+a:link {color: hotpink;}
 
-/* visited link */ 
-a:visited { color: blue; }  
+/* visited link */
+a:visited {color:hotpink;}
 
-/* mouse over link */ 
-a:hover { color: darkslateblue; }  
+/* mouse over link */
+a:hover {color: darkslateblue;}
 
-/* selected link */ 
-a:active { color: darkslateblue;}
+/* selected link */
+a:active {color: darkslateblue;}
 
 ul
 {
@@ -18,8 +18,8 @@ ul
 }
 
 hr {
-  border: 1px solid white;
-  width: 100%;
+	width: 75%;
+	margin-right: 75%;
 }
 
 body
@@ -27,5 +27,10 @@ body
 	/* background-image:url("../resources/offWhite.png")*/
 	background-color: rgb(32, 32, 33);
 	color: rgb(255, 255, 255);
+}
+
+p
+{
+	margin-right: 50%;
 }
 
