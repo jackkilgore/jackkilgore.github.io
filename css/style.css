@@ -1,3 +1,4 @@
+
 a {color:hotpink; }
 
 /* unvisited link */
@@ -20,6 +21,13 @@ ul
 hr {
 	width: 75%;
 	margin-right: 75%;
+}
+
+
+@media only screen and (max-width: 600px) {
+hr {
+	width: 100;
+}
 }
 
 body
