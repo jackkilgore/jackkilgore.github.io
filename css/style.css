@@ -39,6 +39,17 @@ body
 
 p
 {
-	margin-right: 50%;
+	margin-right: 40%;
 }
+
+
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+
+
+}
+
+
 
