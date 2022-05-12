@@ -2,3 +2,7 @@
 	path = pocket_spit
     url = https://github.com/jackkilgore/pocket_spit.git
     branch = Final-GridNoise-euler
+[submodule "room"]
+	path = room
+    url = https://github.com/jackkilgore/room
+    branch = main
