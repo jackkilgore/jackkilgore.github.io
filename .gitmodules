@@ -6,3 +6,6 @@
 	path = room
     url = https://github.com/jackkilgore/room
     branch = main
+[submodule "FindText-AGift"]
+	path = FindText-AGift
+	url = git@github.com:jackkilgore/FindText-AGift.git
