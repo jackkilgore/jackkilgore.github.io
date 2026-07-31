@@ -1,3 +1,18 @@
+/* --------------------------------------------------
+   1. MASTER TYPOGRAPHY & SCALING CONTROL
+   -------------------------------------------------- */
+:root {
+    /* Changing this single variable scales all text proportionally across the site */
+    --base-font-size: 18px;
+}
+
+/* Ensure box-sizing counts padding towards total width */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
 body,
 html {
     width: 100%;
@@ -6,18 +21,20 @@ html {
     margin: 0;
 }
 
-/* Navigation centered */
+/* --------------------------------------------------
+   2. NAVIGATION
+   -------------------------------------------------- */
 .topnav {
     background-color: rgb(255, 255, 255);
     display: flex;
     flex-direction: row;
-    justify-content: center; /* Centered topnav items */
+    justify-content: center;
     padding: 0.5vw;
 }
 
 .topnav a {
     padding: 0vw 0.5vw;
-    font-size: 20px;
+    font-size: calc(var(--base-font-size) * 1.11); /* ~20px at base 18px */
     color: rgb(216, 216, 216);
     font-family: "Nanum Myeongjo";
     transform: scaleY(1);
@@ -34,13 +51,9 @@ html {
     text-decoration: underline;
 }
 
-/* Ensure box-sizing counts padding towards total width */
-*,
-*::before,
-*::after {
-    box-sizing: border-box;
-}
-
+/* --------------------------------------------------
+   3. LAYOUT & CONTAINERS
+   -------------------------------------------------- */
 #content {
     width: 100%;
     display: flex;
@@ -59,7 +72,6 @@ html {
     /* Responsive width bounds */
     width: 90%;
     max-width: 900px;
-
     margin: 0 auto;
 }
 
@@ -76,19 +88,9 @@ html {
     padding: 0.5vw;
 }
 
-/* Mobile Screen Override */
-@media only screen and (max-width: 768px) {
-    .flex-container {
-        width: 100%;
-        max-width: 100%;
-        padding: 0 16px; /* Smooth edge margins on mobile */
-    }
-
-    .flex-container > .work {
-        padding: 0; /* Remove viewport-based padding on mobile */
-    }
-}
-
+/* --------------------------------------------------
+   4. WORK SECTION ELEMENTS
+   -------------------------------------------------- */
 .work img {
     width: auto;
     height: auto;
@@ -96,7 +98,7 @@ html {
 }
 
 .work h2 {
-    font-size: 28px;
+    font-size: calc(var(--base-font-size) * 1.55); /* ~28px at base 18px */
     width: fit-content;
     height: auto;
     padding: 0px 0.25vw;
@@ -107,13 +109,12 @@ html {
 }
 
 .work h2.center {
-    width: 100%; /* Expands the element across the full container width */
-    align-self: center; /* Centers the text inside that full width */
+    width: 100%;
+    align-self: center;
 }
 
 .work .entry {
-    font-size: 22px;
-    width: fit-content;
+    font-size: calc(var(--base-font-size) * 1.22); /* ~22px at base 18px */
     height: auto;
     padding: 0px 0.25vw;
     color: rgb(0, 0, 0);
@@ -122,13 +123,13 @@ html {
     text-decoration: none;
 
     display: grid;
-    grid-template-columns: 1fr auto; /* Title takes remaining space, date takes auto width */
-    align-items: baseline; /* Aligns text along the bottom line */
+    grid-template-columns: 1fr auto; /* Title left, date right */
+    align-items: baseline;
     width: 100%;
 }
 
 .work .entry-right {
-    font-size: 20px; /* Font size will now apply correctly */
+    font-size: calc(var(--base-font-size) * 1.11); /* ~20px at base 18px */
     color: rgb(0, 0, 0);
     font-family: "Nanum Myeongjo";
     font-weight: normal;
@@ -136,7 +137,7 @@ html {
 }
 
 .work .entry-sub {
-    font-size: 18px; /* Font size will now apply correctly */
+    font-size: var(--base-font-size); /* 18px at base 18px */
     color: rgb(0, 0, 0);
     font-family: "Nanum Myeongjo";
     font-weight: normal;
@@ -146,13 +147,13 @@ html {
 
 .work h3.entry-header {
     display: flex;
-    justify-content: space-between; /* Pushes the title left and span right */
-    align-items: center; /* Keeps them aligned on the same baseline */
-    width: 100%; /* Ensures full width to push to the far right */
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
 }
 
 .work p {
-    font-size: 18px;
+    font-size: var(--base-font-size); /* 18px at base 18px */
     width: auto;
     padding: 0px 5px;
     color: rgb(0, 0, 0);
@@ -164,7 +165,7 @@ html {
 }
 
 .work p.stretch {
-    font-size: 10px;
+    font-size: calc(var(--base-font-size) * 0.55);
     width: auto;
     padding: 70px 5px;
     color: rgb(0, 0, 0);
@@ -174,7 +175,7 @@ html {
 }
 
 .work h2.stretch {
-    font-size: 19px;
+    font-size: calc(var(--base-font-size) * 1.05);
     width: fit-content;
     height: auto;
     padding: 60px 0.5vw;
@@ -182,13 +183,6 @@ html {
     font-family: "Nanum Myeongjo";
     transform: scale(1, 10);
     text-decoration: none;
-}
-
-@media only screen and (max-device-width: 480px) {
-    .flex-container > .work {
-        width: 95vw;
-        padding: 5px;
-    }
 }
 
 .center {
@@ -202,4 +196,24 @@ html {
     bottom: 0;
     width: 100%;
     height: 30px;
+}
+
+/* --------------------------------------------------
+   5. MOBILE RESPONSIVE OVERRIDES
+   -------------------------------------------------- */
+@media only screen and (max-width: 768px) {
+    :root {
+        /* Scales every heading, entry, and body text down proportionally on mobile */
+        --base-font-size: 15px;
+    }
+
+    .flex-container {
+        width: 100%;
+        max-width: 100%;
+        padding: 0 16px; /* Smooth edge gutters */
+    }
+
+    .flex-container > .work {
+        padding: 0;
+    }
 }
