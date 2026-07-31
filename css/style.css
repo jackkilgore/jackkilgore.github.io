@@ -58,7 +58,7 @@ html {
 
     /* Responsive width bounds */
     width: 90%;
-    max-width: 700px;
+    max-width: 900px;
 
     margin: 0 auto;
 }
@@ -96,7 +96,7 @@ html {
 }
 
 .work h2 {
-    font-size: 24px;
+    font-size: 28px;
     width: fit-content;
     height: auto;
     padding: 0px 0.25vw;
@@ -112,7 +112,7 @@ html {
 }
 
 .work .entry {
-    font-size: 18px;
+    font-size: 22px;
     width: fit-content;
     height: auto;
     padding: 0px 0.25vw;
@@ -128,7 +128,7 @@ html {
 }
 
 .work .entry-right {
-    font-size: 16px; /* Font size will now apply correctly */
+    font-size: 20px; /* Font size will now apply correctly */
     color: rgb(0, 0, 0);
     font-family: "Nanum Myeongjo";
     font-weight: normal;
@@ -136,7 +136,7 @@ html {
 }
 
 .work .entry-sub {
-    font-size: 14px; /* Font size will now apply correctly */
+    font-size: 18px; /* Font size will now apply correctly */
     color: rgb(0, 0, 0);
     font-family: "Nanum Myeongjo";
     font-weight: normal;
@@ -152,7 +152,7 @@ html {
 }
 
 .work p {
-    font-size: 14px;
+    font-size: 18px;
     width: auto;
     padding: 0px 5px;
     color: rgb(0, 0, 0);
@@ -164,7 +164,7 @@ html {
 }
 
 .work p.stretch {
-    font-size: 6px;
+    font-size: 10px;
     width: auto;
     padding: 70px 5px;
     color: rgb(0, 0, 0);
@@ -174,7 +174,7 @@ html {
 }
 
 .work h2.stretch {
-    font-size: 15px;
+    font-size: 19px;
     width: fit-content;
     height: auto;
     padding: 60px 0.5vw;
