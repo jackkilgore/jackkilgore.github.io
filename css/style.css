@@ -34,13 +34,20 @@ html {
     text-decoration: underline;
 }
 
-/* Main content wrapper */
+/* Ensure box-sizing counts padding towards total width */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
 #content {
     width: 100%;
     display: flex;
     flex-direction: column;
-    align-items: center; /* Center flex-container inside content */
+    align-items: center;
     padding-bottom: 60px;
+    overflow-x: hidden; /* Safety net against horizontal page overflow */
 }
 
 /* Main Flex Container centered on screen */
@@ -48,27 +55,37 @@ html {
     display: flex;
     flex-direction: column;
     background-color: rgb(255, 255, 255);
-    width: max-content;
-    margin: 0 auto; /* Centered block layout */
+
+    /* Responsive width bounds */
+    width: 90%;
+    max-width: 700px;
+
+    margin: 0 auto;
 }
 
 .flex-container > .work {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    text-align: left; /* Center text */
-    overflow: hidden;
-    width: 50vw;
+    text-align: left;
+
+    /* Fill parent container width cleanly */
+    width: 100%;
+    max-width: 100%;
     height: auto;
-    margin: 0 auto;
     padding: 0.5vw;
 }
 
 /* Mobile Screen Override */
 @media only screen and (max-width: 768px) {
     .flex-container {
-        /* Expand width on mobile devices to fill most of the screen */
-        width: 90vw;
+        width: 100%;
+        max-width: 100%;
+        padding: 0 16px; /* Smooth edge margins on mobile */
+    }
+
+    .flex-container > .work {
+        padding: 0; /* Remove viewport-based padding on mobile */
     }
 }
 
