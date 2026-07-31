@@ -201,7 +201,7 @@ html {
 /* --------------------------------------------------
    5. MOBILE RESPONSIVE OVERRIDES
    -------------------------------------------------- */
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 480px) {
     :root {
         /* Scales every heading, entry, and body text down proportionally on mobile */
         --base-font-size: 15px;
