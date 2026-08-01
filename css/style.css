@@ -75,7 +75,7 @@ html {
     margin: 0 auto;
 }
 
-.flex-container > .work {
+.flex-container > .cv {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -89,15 +89,9 @@ html {
 }
 
 /* --------------------------------------------------
-   4. WORK SECTION ELEMENTS
+   4. GLOBAL TYPOGRAPHY
    -------------------------------------------------- */
-.work img {
-    width: auto;
-    height: auto;
-    padding: 0.5vw;
-}
-
-.work h2 {
+h2 {
     font-size: calc(var(--base-font-size) * 1.55); /* ~28px at base 18px */
     width: fit-content;
     height: auto;
@@ -108,51 +102,12 @@ html {
     text-decoration: none;
 }
 
-.work h2.center {
+h2.center {
     width: 100%;
     align-self: center;
 }
 
-.work .entry {
-    font-size: calc(var(--base-font-size) * 1.22); /* ~22px at base 18px */
-    height: auto;
-    padding: 0px 0.25vw;
-    color: rgb(0, 0, 0);
-    font-family: "Nanum Myeongjo";
-    transform: scaleY(1);
-    text-decoration: none;
-
-    display: grid;
-    grid-template-columns: 1fr auto; /* Title left, date right */
-    align-items: baseline;
-    width: 100%;
-}
-
-.work .entry-right {
-    font-size: calc(var(--base-font-size) * 1.11); /* ~20px at base 18px */
-    color: rgb(0, 0, 0);
-    font-family: "Nanum Myeongjo";
-    font-weight: normal;
-    text-align: right;
-}
-
-.work .entry-sub {
-    font-size: var(--base-font-size); /* 18px at base 18px */
-    color: rgb(0, 0, 0);
-    font-family: "Nanum Myeongjo";
-    font-weight: normal;
-    text-align: left;
-    font-style: italic;
-}
-
-.work h3.entry-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-}
-
-.work p {
+p {
     font-size: var(--base-font-size); /* 18px at base 18px */
     width: auto;
     padding: 0px 5px;
@@ -164,26 +119,15 @@ html {
     line-height: 1.5;
 }
 
-.work p.stretch {
-    font-size: calc(var(--base-font-size) * 0.55);
+img {
     width: auto;
-    padding: 70px 5px;
-    color: rgb(0, 0, 0);
-    font-family: "Nanum Myeongjo";
-    transform: scale(1, 4);
-    text-decoration: none;
+    height: auto;
+    padding: 0.5vw;
 }
 
-.work h2.stretch {
-    font-size: calc(var(--base-font-size) * 1.05);
-    width: fit-content;
-    height: auto;
-    padding: 60px 0.5vw;
-    color: rgb(204, 201, 198);
-    font-family: "Nanum Myeongjo";
-    transform: scale(1, 10);
-    text-decoration: none;
-}
+/* --------------------------------------------------
+   5. CV SECTION ELEMENTS
+   -------------------------------------------------- */
 
 .center {
     display: flex;
@@ -199,7 +143,7 @@ html {
 }
 
 /* --------------------------------------------------
-   5. MOBILE RESPONSIVE OVERRIDES
+   6. MOBILE RESPONSIVE OVERRIDES
    -------------------------------------------------- */
 @media only screen and (max-width: 480px) {
     :root {
@@ -213,7 +157,66 @@ html {
         padding: 0 16px; /* Smooth edge gutters */
     }
 
-    .flex-container > .work {
+    .flex-container > .cv {
         padding: 0;
     }
+}
+
+/* --------------------------------------------------
+   7. LISTS
+   -------------------------------------------------- */
+ul {
+    font-size: var(--base-font-size);
+    color: rgb(0, 0, 0);
+    font-family: "Nanum Myeongjo";
+    line-height: 1.5;
+    text-align: left;
+    margin: 0;
+    padding: 0 5px 0 25px;
+}
+
+li {
+    margin-bottom: 0.4em;
+}
+
+/* CV-specific: add whitespace below each list so entries read as
+   distinct blocks. The generic `ul` above sets margin: 0; this only
+   adds the bottom margin, inheriting everything else. */
+.cv ul {
+    margin-bottom: 1.5em;
+}
+
+/* --------------------------------------------------
+   8. DEFINITION-LIST ENTRIES (title + right-aligned date)
+   -------------------------------------------------- */
+/* Pandoc renders `Term\n:   date` as a <dl>. Style it to match the
+   original .entry title/date grid. */
+.cv dl {
+    font-size: calc(var(--base-font-size) * 1.22); /* ~22px at base 18px */
+    margin: 0;
+    padding: 0 0.25vw;
+    font-family: "Nanum Myeongjo";
+    color: rgb(0, 0, 0);
+    width: 100%; /* .cv is a flex container with align-items:flex-start,
+                   so children shrink to content width unless stretched */
+}
+
+.cv dl dt {
+    display: inline;
+    font-weight: bold;
+}
+
+.cv dl dd {
+    display: inline;
+    float: right;
+    font-size: calc(var(--base-font-size) * 1.11); /* ~20px at base 18px */
+    font-weight: normal;
+    margin: 0;
+    text-align: right;
+}
+
+/* The italic subtitle that follows an entry. Pandoc renders
+   `*subtitle*` as <em>; style it like the original .entry-sub. */
+.cv p em {
+    font-style: italic;
 }
