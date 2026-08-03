@@ -1,140 +1,409 @@
-body, html {
+/* --------------------------------------------------
+   1. MASTER TYPOGRAPHY & SCALING CONTROL
+   -------------------------------------------------- */
+:root {
+    /* Changing this single variable scales all text proportionally across the site */
+    --base-font-size: 18px;
+}
+
+/* Ensure box-sizing counts padding towards total width */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body,
+html {
     width: 100%;
     height: 100%;
     background: #ffffff;
+    margin: 0;
 }
 
-
-/* Add a black background color to the top navigation */
+/* --------------------------------------------------
+   2. NAVIGATION
+   -------------------------------------------------- */
 .topnav {
     background-color: rgb(255, 255, 255);
     display: flex;
     flex-direction: row;
-    justify-content: left;
+    justify-content: center;
+    align-items: center; /* keep all items vertically centered */
+    gap: 1.5vw; /* space between nav items */
     padding: 0.5vw;
-  }
+}
 
-  /* Style the links inside the navigation bar */
-  .topnav a {
-    padding: 0vw 0.5vw;
-    font-size: 20px;
+.topnav a {
+    padding: 0.25vw 0.75vw;
+    font-size: calc(var(--base-font-size) * 1.11); /* ~20px at base 18px */
     color: rgb(216, 216, 216);
-    font-family: 'Nanum Myeongjo';
-    transform: scaleY(1.0);
-    transform: scaleX(1.0);
+    font-family: "Nanum Myeongjo";
+    transform: scaleY(1);
+    transform: scaleX(1);
     text-decoration: none;
-  }
-  
-  /* Change the color of links on hover */
-  .topnav a:hover {
+}
+
+.topnav a:hover {
     color: rgb(0, 0, 0);
-  }
-  
-  /* Add a color to the active/current link */
-  .topnav a.active {
+}
+
+.topnav a.active {
     color: rgb(0, 0, 0);
     text-decoration: underline;
-  }
+}
 
+/* Dropdown (Works) */
+.dropdown {
+    position: relative;
+    display: inline-block;
+    display: flex;
+    align-items: center; /* center the button within the dropdown wrapper */
+}
+
+.dropdown .dropbtn {
+    padding: 0.25vw 0.75vw;
+    font-size: calc(var(--base-font-size) * 1.11); /* ~20px at base 18px */
+    color: rgb(216, 216, 216);
+    font-family: "Nanum Myeongjo";
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.dropdown:hover .dropbtn {
+    color: rgb(0, 0, 0);
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgb(255, 255, 255);
+    min-width: 120px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    display: block;
+    padding: 0.5vw 1vw;
+    text-align: left;
+    white-space: nowrap;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* --------------------------------------------------
+   3. LAYOUT & CONTAINERS
+   -------------------------------------------------- */
+#content {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 60px;
+    overflow-x: hidden; /* Safety net against horizontal page overflow */
+}
+
+/* Main Flex Container centered on screen */
 .flex-container {
     display: flex;
     flex-direction: column;
     background-color: rgb(255, 255, 255);
-    width: max-content;
-  }
 
-.flex-container > .work {
-    padding: 0%;
+    /* Responsive width bounds */
+    width: 90%;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.flex-container > .cv {
     display: flex;
     flex-direction: column;
-    overflow: hidden;
-    width: 40vw;
+    align-items: flex-start;
+    text-align: left;
+
+    /* Fill parent container width cleanly */
+    width: 100%;
+    max-width: 100%;
     height: auto;
-    margin: 0%;
     padding: 0.5vw;
 }
 
-.work img
-{
-    width: auto;
-    height: auto;
-    padding: 0.5vw;
-    /* cursor: pointer; */
-}
-
-.work h2
-{
-    font-size: 15px;
+/* --------------------------------------------------
+   4. GLOBAL TYPOGRAPHY
+   -------------------------------------------------- */
+h1 {
+    font-size: calc(var(--base-font-size) * 1.9); /* ~34px at base 18px */
     width: fit-content;
     height: auto;
-    padding: 0px 0.5vw;
-    color: rgb(204, 201, 198);
-    font-family: 'Nanum Myeongjo';
-    transform: scaleY(1.0);
+    padding: 0px 0.25vw;
+    color: rgb(0, 0, 0);
+    font-family: "Nanum Myeongjo";
+    transform: scaleY(1);
     text-decoration: none;
+    margin: 1em 0 0.5em 0; /* space above, tighter below */
 }
 
-.work p
-{
-    font-size: 12px;
+h1.center {
+    width: 100%;
+    align-self: center;
+}
+
+h2 {
+    font-size: calc(var(--base-font-size) * 1.55); /* ~28px at base 18px */
+    width: fit-content;
+    height: auto;
+    padding: 0px 0.25vw;
+    color: rgb(0, 0, 0);
+    font-family: "Nanum Myeongjo";
+    transform: scaleY(1);
+    text-decoration: none;
+    margin: 1em 0 0.5em 0; /* space above, tighter below */
+}
+
+h2.center {
+    width: 100%;
+    align-self: center;
+}
+
+h3 {
+    font-size: calc(var(--base-font-size) * 1.22); /* ~22px at base 18px */
+    width: fit-content;
+    height: auto;
+    padding: 0px 0.25vw;
+    color: rgb(0, 0, 0);
+    font-family: "Nanum Myeongjo";
+    transform: scaleY(1);
+    text-decoration: none;
+    margin: 1em 0 0.5em 0; /* space above, tighter below */
+}
+
+h3.center {
+    width: 100%;
+    align-self: center;
+}
+
+p {
+    font-size: var(--base-font-size); /* 18px at base 18px */
     width: auto;
     padding: 0px 5px;
     color: rgb(0, 0, 0);
-    font-family: 'Nanum Myeongjo';
-    transform: scale(1,1);
+    font-family: "Nanum Myeongjo";
+    transform: scale(1, 1);
     text-decoration: none;
+    text-align: left;
+    line-height: 1.5;
+    margin: 0 0 1em 0; /* space below only, so a subtitle sits tight under a heading */
 }
 
-.work p.stretch
-{
-    font-size: 6px;
-    width: auto;
-    padding: 70px 5px;
+blockquote {
+    margin: 0 0 1em 0;
+    padding: 0.5em 1em;
+    border-left: 3px solid rgb(216, 216, 216);
     color: rgb(0, 0, 0);
-    font-family: 'Nanum Myeongjo';
-    transform: scale(1,4);
-    text-decoration: none;
+    font-family: "Nanum Myeongjo";
+    font-style: italic;
+    line-height: 1.5;
 }
 
-.work h2.stretch
-{
-    font-size: 15px;
-    width: fit-content;
+blockquote p {
+    padding: 0;
+    font-style: italic;
+}
+
+blockquote footer,
+blockquote p:last-child {
+    font-style: normal;
+    font-size: calc(var(--base-font-size) * 0.9);
+    color: rgb(120, 120, 120);
+}
+
+img {
+    width: auto;
     height: auto;
-    padding: 60px 0.5vw;
-    color: rgb(204, 201, 198);
-    font-family: 'Nanum Myeongjo';
-    transform: scale(1,10);
-    text-decoration: none;
+    max-width: 100%; /* never overflow the container */
+    padding: 0.5vw;
 }
 
-@media only screen and (max-device-width: 480px) {
-
-    .flex-container > .work {
-        padding: 0%;
-        display: flex;
-        flex-direction: column;
-        overflow: hidden;
-        width: 95vw;
-        height: auto;
-        margin: 0%;
-        padding: 5px;
-    }
+/* Center images/iframes that sit directly in the main flex container
+   (e.g. the front-page photo). Images are wrapped in <p> by pandoc;
+   raw iframes are direct children. */
+.flex-container > p > img,
+.flex-container > iframe {
+    display: block; /* inline elements ignore auto margins */
+    margin: 0 auto;
 }
 
-.center
-{
+/* Reusable width utilities for images and iframes. Apply via `{.w-XX}`
+   in the Markdown for images, or `class="w-XX"` on a raw iframe.
+   Because these are classes (not inline styles), they can be overridden
+   in the mobile media query below. */
+.flex-container > p > img.w-25,
+.flex-container > iframe.w-25 {
+    width: 25%;
+}
+.flex-container > p > img.w-50,
+.flex-container > iframe.w-50 {
+    width: 50%;
+}
+.flex-container > p > img.w-75,
+.flex-container > iframe.w-75 {
+    width: 75%;
+}
+.flex-container > p > img.w-80,
+.flex-container > iframe.w-80 {
+    width: 80%;
+}
+.flex-container > p > img.w-100,
+.flex-container > iframe.w-100 {
+    width: 100%;
+}
+
+/* --------------------------------------------------
+   5. CV SECTION ELEMENTS
+   -------------------------------------------------- */
+
+.center {
+    display: flex;
     justify-content: center;
+    align-items: center;
 }
 
+/* Center text content (paragraphs, lists, etc.) inside a block. */
+.center-text {
+    text-align: center;
+}
 
-#content {
-    padding-bottom:60px; /* Height of the footer element */
+/* The global `p` rule sets text-align: left on the element itself, which
+   would override the inherited centering above. Target the children. */
+.center-text p,
+.center-text li {
+    text-align: center;
 }
 
 #footer {
     text-align: center;
-    bottom:0;
-    width:100%;
-    height:30px;   /* Height of the footer */
+    bottom: 0;
+    width: 100%;
+    height: 30px;
+}
+
+/* --------------------------------------------------
+   6. MOBILE RESPONSIVE OVERRIDES
+   -------------------------------------------------- */
+@media only screen and (max-width: 480px) {
+    :root {
+        /* Scales every heading, entry, and body text down proportionally on mobile */
+        --base-font-size: 15px;
+    }
+
+    .flex-container {
+        width: 100%;
+        max-width: 100%;
+        padding: 0 16px; /* Smooth edge gutters */
+    }
+
+    .flex-container > .cv {
+        padding: 0;
+    }
+
+    /* On small screens the container is much narrower, so images/iframes
+       sized with the .w-* utilities become too small. Scale them up. */
+    .flex-container > p > img.w-25,
+    .flex-container > iframe.w-25 {
+        width: 50%;
+    }
+    .flex-container > p > img.w-50,
+    .flex-container > iframe.w-50 {
+        width: 80%;
+    }
+    .flex-container > p > img.w-75,
+    .flex-container > iframe.w-75 {
+        width: 90%;
+    }
+    .flex-container > p > img.w-80,
+    .flex-container > iframe.w-80 {
+        width: 95%;
+    }
+    .flex-container > p > img.w-100,
+    .flex-container > iframe.w-100 {
+        width: 100%;
+    }
+
+    /* Nav: vw-based spacing collapses on narrow screens, so use fixed
+       pixel gaps and padding to keep items from squishing together. */
+    .topnav {
+        gap: 12px;
+        padding: 8px 0;
+    }
+
+    .topnav a,
+    .dropdown .dropbtn {
+        padding: 4px 6px;
+    }
+}
+
+/* --------------------------------------------------
+   7. LISTS
+   -------------------------------------------------- */
+ul {
+    font-size: var(--base-font-size);
+    color: rgb(0, 0, 0);
+    font-family: "Nanum Myeongjo";
+    line-height: 1.5;
+    text-align: left;
+    margin: 0;
+    padding: 0 5px 0 25px;
+    list-style-type: circle; /* bullet marker: disc | circle | square | none | "…" */
+}
+
+li {
+    margin-bottom: 0.4em;
+}
+
+/* CV-specific: add whitespace below each list so entries read as
+   distinct blocks. The generic `ul` above sets margin: 0; this only
+   adds the bottom margin, inheriting everything else. */
+.cv ul {
+    margin-bottom: 1.5em;
+}
+
+/* --------------------------------------------------
+   8. DEFINITION-LIST ENTRIES (title + right-aligned date)
+   -------------------------------------------------- */
+/* Pandoc renders `Term\n:   date` as a <dl>. Style it to match the
+   original .entry title/date grid. */
+.cv dl {
+    font-size: calc(var(--base-font-size) * 1.22); /* ~22px at base 18px */
+    margin: 0;
+    padding: 0 0.25vw;
+    font-family: "Nanum Myeongjo";
+    color: rgb(0, 0, 0);
+    width: 100%; /* .cv is a flex container with align-items:flex-start,
+                   so children shrink to content width unless stretched */
+}
+
+.cv dl dt {
+    display: inline;
+    font-weight: bold;
+}
+
+.cv dl dd {
+    display: inline;
+    float: right;
+    font-size: calc(var(--base-font-size) * 1.11); /* ~20px at base 18px */
+    font-weight: normal;
+    margin: 0;
+    text-align: right;
+}
+
+/* The italic subtitle that follows an entry. Pandoc renders
+   `*subtitle*` as <em>; style it like the original .entry-sub. */
+.cv p em {
+    font-style: italic;
 }

@@ -9,15 +9,15 @@
             href="https://fonts.googleapis.com/css?family=Nanum+Myeongjo"
         />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <title>jackilgore</title>
+        <title>$pagetitle$</title>
     </head>
     <body>
         <div class="topnav">
-            <a class="active" href="index.html"
+            <a class="$if(home)$active$endif$" href="index.html"
                 >Jack Kilgore</a
             >
             <div class="dropdown">
-                <a class="dropbtn ">Works</a>
+                <a class="dropbtn $if(works)$active$endif$">Works</a>
                 <div class="dropdown-content">
                     <a href="affection.html">Affection</a>
                     <a href="emission_control_2.html">Emission Control 2</a>
@@ -25,21 +25,13 @@
                     <a href="live.html">live</a>
                 </div>
             </div>
-            <a class="" href="contact.html"
+            <a class="$if(contact)$active$endif$" href="contact.html"
                 >Contact</a
             >
-            <a class="" href="cv.html">CV</a>
+            <a class="$if(cv)$active$endif$" href="cv.html">CV</a>
         </div>
         <div id="content">
-            <div class="flex-container"><p><img
-src="assets/bby_bear.webp" class="w-50" /></p>
-<p>I am a creative DSP programmer and composer with a reverence for all
-things related to sound. I have worked with artists and professional
-audio companies in designing and implementing music effects and
-synthesizers for the computer. I am interested in building technical and
-creative tooling for working with audio and musical structures. I prefer
-specificity and craftsmanship over generalization. I love music, I love
-tones, I love math!</p></div>
+            <div class="flex-container">$body$</div>
         </div>
         <div id="footer"></div>
     </body>
