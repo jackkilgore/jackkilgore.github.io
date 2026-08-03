@@ -22,10 +22,10 @@ Emission Control 2
 
 _Open Source Granular Synthesizer with Curtis Roads and Rodney DuPlessis_
 
-- Published article for MIT Press: Computer Music Journal 45:3. [Architecture for Real-Time Granular Synthesis With Per-Grain Processing: EmissionControl2.](https://direct.mit.edu/comj/issue/45/3)
 - Head software developer and designer
-- Source code and manual can be found here: <https://github.com/EmissionControl2/EmissionControl2>
-- Software can be found here: <https://github.com/EmissionControl2/EmissionControl2/releases>
+- [Software download](https://github.com/EmissionControl2/EmissionControl2/releases)
+- [MIT Press: Computer Music Journal 45:3:Architecture for Real-Time Granular Synthesis With Per-Grain Processing: EmissionControl2.](https://direct.mit.edu/comj/issue/45/3)
+- [Source code and manual](https://github.com/EmissionControl2/EmissionControl2)
 
 Affection
 : 2026
@@ -56,7 +56,7 @@ University of California: Santa Barbara
 
 Department of Computer Science\
 Bachelors of Science\
-UCSB Chancellor's Award for Excellence in Undergraduate Research (Engineering): [press](https://engineering.ucsb.edu/news/granular-accomplishments)
+[UCSB Chancellor's Award for Excellence in Undergraduate Research (Engineering)](https://engineering.ucsb.edu/news/granular-accomplishments)
 
 ## TECHNICAL STRENGTHS AND TOOLS {.center}
 
