@@ -43,10 +43,6 @@ _Music Software in Collaboration with Trevor Treglia_
 
 - Trevor Treglia composed a piece titled "A Special Mystic Joy" that employs frequency-dependent loopers . I was tasked with designing a piece of software for enabling the performance of the composition in real-time.
 
-:::
-
-::: {.cv}
-
 ## EDUCATION {.center}
 
 University of California: Santa Barbara
@@ -62,10 +58,6 @@ Department of Computer Science\
 Bachelors of Science\
 UCSB Chancellor's Award for Excellence in Undergraduate Research (Engineering): [press](https://engineering.ucsb.edu/news/granular-accomplishments)
 
-:::
-
-::: {.cv}
-
 ## TECHNICAL STRENGTHS AND TOOLS {.center}
 
 - Cross-platform, real-time programming and signal processing
@@ -78,10 +70,6 @@ UCSB Chancellor's Award for Excellence in Undergraduate Research (Engineering): 
 - Programming languages: C++, Python, Javascript
 - High level applications: Ableton, Reaper, Adobe products, Davinci Resolve
 - Defensive and careful use of LLM tooling
-
-:::
-
-::: {.cv}
 
 ## SECONDARY EXPERIENCE {.center}
 

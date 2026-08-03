@@ -7,6 +7,7 @@ ROOT="$(cd "$(dirname "$0")" && pwd)"
 cd "$ROOT"
 
 TEMPLATE="templates/page.html"
+FILTER="filters/links.lua"
 
 build_page() {
     md="$1"
@@ -16,8 +17,13 @@ build_page() {
     # Which nav link is active for this page.
     active=""
     case "$name" in
-        cv)    active="cv=true" ;;
-        index) active="home=true" ;;
+        cv)      active="cv=true" ;;
+        index)   active="home=true" ;;
+        contact) active="contact=true" ;;
+        affection) active="works=true" ;;
+        new)     active="works=true" ;;
+        emission_control_2) active="works=true" ;;
+        live)    active="works=true" ;;
     esac
 
     echo "Building $out <- $md"
@@ -25,6 +31,7 @@ build_page() {
         pandoc "$md" \
             --standalone \
             --template "$TEMPLATE" \
+            --lua-filter "$FILTER" \
             -V "pagetitle=jackilgore" \
             -V "$active" \
             -o "$out"
@@ -32,12 +39,13 @@ build_page() {
         pandoc "$md" \
             --standalone \
             --template "$TEMPLATE" \
+            --lua-filter "$FILTER" \
             -V "pagetitle=jackilgore" \
             -o "$out"
     fi
 }
 
-for md in content/*.md; do
+for md in content/*.md content/*/*.md; do
     [ -e "$md" ] || continue
     build_page "$md"
 done
