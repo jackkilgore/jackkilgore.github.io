@@ -1,23 +1,82 @@
 # Affection {.center}
 
-<iframe class="w-50" style="border: 0; aspect-ratio: 1 / 1; height: auto;" src="https://bandcamp.com/EmbeddedPlayer/album=26854996/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/transparent=true/" seamless><a href="https://jckl.bandcamp.com/album/affection">Affection by Jack Kilgore</a></iframe>
+<style>
+    /* Per-iframe widths. Adjust each variable to resize that embed.
+       The mobile media query scales them up on small screens. */
+    :root {
+        --bandcamp-w: 60%;
+        --youtube-w: 80%;
+    }
+    @media (max-width: 480px) {
+        :root {
+            --bandcamp-w: 80%;
+            --youtube-w: 95%;
+        }
+    }
+
+    /* Margin-scattered images. Each lyric image gets its own class so it
+       can be positioned independently. All are tuned for desktop; the
+       media query below resets them to full-width centered blocks on
+       small screens so nothing breaks on mobile. */
+    .img-toil      { float: right; width: 45%; aspect-ratio: 300 / 600; margin: -2em 0 0 -1.25em; }
+    .img-rejoice   { display: block; width: 85%; margin: 0 auto; }
+    .img-participate{ float: right; width: 45%; aspect-ratio: 300 / 475; margin: -3em 0 0 0; }
+    .img-collapse  { float: right; width: 45%; aspect-ratio: 1 / 1; margin: -3em 0 0 0; }
+    .img-ego       { display: block; width: 50%; margin: 0 auto; }
+    .img-everyone  { display: block; width: 60%; margin: 0 auto; }
+    .img-mutuals   { float: right; width: 45%; aspect-ratio: 100 / 285; margin: -2em 0 0 0; }
+    .img-niche     { float: right; width: 45%; aspect-ratio: 100 / 250; margin: -2em 0 0 0; }
+    .img-asphyxiate{ float: right; width: 65%; aspect-ratio: 100 / 60; margin: 0.5em 1.5em 1em 0; }
+    .img-spiral-0    { float: right; width: 45%; aspect-ratio: 100 / 200; margin: 0em 0 0em 0em; position: relative; z-index: 2; }
+    .img-spiral-1    { width: 45%; margin: 0em auto; }
+    .img-spiral-2    { float: right; width: 45%; margin: 3em 0 0 0; }
+    .img-confront  { float: right; width: 45%; aspect-ratio: 75 / 50; margin: -6em 0 0 0; }
+     .img-confront-1  { float: right; width: 45%; aspect-ratio: 100 / 175; margin: -6em 0 0 0; }
+    .img-affection { width: 50%; margin: 0.5em 0 1em 1.5em; }
+    .img-andthen   { width: 50%; margin: 0.5em 1.5em 1em 0; }
+    .img-cd   { display: block; width: 80%; margin: 0em auto; }
+
+
+    /* On small screens there are no margins to scatter into, so every
+       image becomes a full-width, centered, stacked block. */
+    @media (max-width: 480px) {
+        .img-toil, .img-rejoice, .img-participate, .img-collapse,
+        .img-ego, .img-everyone, .img-mutuals, .img-niche,
+        .img-asphyxiate, .img-spiral-2, .img-spiral-1, .img-spiral-0, .img-confront, .img-confront-1, .img-affection, .img-andthen, .img-cd {
+            float: none;
+            display: block;
+            width: 100%;
+            max-width: 100%;
+            aspect-ratio: auto;
+            margin: 1em auto;
+        }
+    }
+</style>
+
+<iframe style="border: 0; aspect-ratio: 1 / 1; height: auto; width: var(--bandcamp-w); display: block; margin: 0 auto 1em auto;" src="https://bandcamp.com/EmbeddedPlayer/album=26854996/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/transparent=true/" seamless><a href="https://jckl.bandcamp.com/album/affection">Affection by Jack Kilgore</a></iframe>
 
 > Much like its titular emotion, Jack Kilgore's debut is both strange and profound, an experimental electronic record that traffics in droning synth waves, spoken word soundbites, and references to bread, all of which somehow communicate awe for the interconnectedness of human experience. On their own, these songs stand as monoliths of copper magic, dense and impenetrable walls of sound reminiscent of the grainy synth baths on OPN's Replica crossed with some of the more aggressively schizophrenic cuts from Aphex Twin's Drukqs. However, when paired with the clips and images selected by Kilgore for its visualizer, they become auditory lenses revealing the meaning in these small moments from life in the Anthropocene.
 >
 > — [Nick Ayres Demasi](https://nickayresdemasi.substack.com/i/193542154/jack-kilgore-affection)
 
-<iframe class="w-80" style="aspect-ratio: 16 / 9; border: 0; margin-bottom: 1em" src="https://www.youtube.com/embed/tEMwsyhE-Rc" title="Affection" frameborder="0" allowfullscreen></iframe>
+<iframe style="aspect-ratio: 16 / 9; border: 0; width: var(--youtube-w); display: block; margin: 0 auto 1em auto;" src="https://www.youtube.com/embed/tEMwsyhE-Rc" title="Affection" frameborder="0" allowfullscreen></iframe>
 
 ## Lyrics {.center}
 
 ### 1. the point
 
-And from the endless chatter, I come to myself in an empty room.
+<img src="assets/affection/3.toil.webp" class="img-toil" />
+
+<pre class="poem">
+And from the endless chatter, 
+I come to myself in an empty room.
 
 I've lost sight of the point.
+</pre>
 
 ### 2. Bread
 
+<pre class="poem">
 Why are you afraid?
 Why are you afraid of saying something?
 Why are you afraid of sex?
@@ -25,9 +84,11 @@ Why are you afraid of crying?
 Why are you afraid of elation?
 Why are you afraid of the point?
 Why are you afraid?
+</pre>
 
 ### 3. toil
 
+<pre class="poem">
 And the fear of the unnameable, leads us higher up the ladder.
 
 With delusions of grandeur we toil over sculpture and system,
@@ -40,13 +101,17 @@ But we look back, and we forget why we've built.
 But we've built and this is true, so it must be good, so we continue to build.
 
 And our great ladder reaches higher and higher into the pit.
+</pre>
 
 ### 4. Rejoice
 
-\[None\]
+<img src="assets/affection/4.rejoice.webp" class="img-rejoice" />
 
 ### 5. Participate
 
+<img src="assets/affection/5.participate.webp" class="img-participate" />
+
+<pre class="poem">
 I can participate.
 I can participate.
 I can participate.
@@ -68,9 +133,13 @@ the fury of pure momentum.
 Pure ascensions, pure participate.
 
 I am a part of something and I've finally found love.
+</pre>
 
 ### 6. I love you through hiccups
 
+<img src="assets/affection/16.1.confrontation.webp" class="img-confront-1" />
+
+<pre class="poem">
 A: A long time ago we stood right here in this spot.
 And you said something you remember what you said?
 
@@ -91,13 +160,18 @@ I want you in my life forever, okay?
 
 B: Sister of life.
 
-A: I have something for you. \[Name\].
+A: I have something for you. [Name].
 Will you make me the happiest man in the world?
 And mar-
+</pre>
 
 ### 7. collapse
 
-And the plastic skeletons of our abstractions they fall apart, they fall apart,
+<img src="assets/affection/7.collapse.webp" class="img-collapse" />
+
+<pre class="poem">
+And the plastic skeletons of our abstractions 
+they fall apart, they fall apart,
 and our dreams, fallen apart, become fake become free,
 and we watch everything fall apart.
 
@@ -107,21 +181,27 @@ And those objects start to look like people fallen apart.
 A collage of hypertext, plaintext, images, and videos.
 
 I think I love them?
+</pre>
 
 ### 8. Ego
 
-I love my friends and my friends love me.
+<img src="assets/affection/8.ego.webp" class="img-ego" />
 
 ### 9. Special
 
+<pre class="poem">
 I think we got something special. we try. WE TRY
+</pre>
 
 ### 10. i thought i could be everyone
 
-I thought I could be everyone.
+<img src="assets/affection/10.ithoughticouldbeeveryone.webp" class="img-everyone" />
 
 ### 11. Mutuals
 
+<img src="assets/affection/11.mutuals.webp" class="img-mutuals" />
+
+<pre class="poem">
 A: Now Lisa just started following my Instagram.
 
 B: I usually follow people pretty quickly.
@@ -139,12 +219,14 @@ What you do to me?
 whotookmichael: follow for follow, did it happen?
 
 jckl: I think so, mutual affection in our follow for follow.
-As the Venn diagram of our media consumption converges towards a circle
+As the Venn diagram of our media consumption 
+converges towards a circle
 we fall more and more in love.
 
 We have the same eyes now.
 We have the same ears now.
-Surrounded by birds, frogs, and people, I block them out for you.
+Surrounded by birds, frogs, and people, 
+I block them out for you.
 I block them out knowing we share an information flow.
 I give up my immediate replacing dirt, skin,
 grass with glass,
@@ -160,9 +242,13 @@ or is it just me I'm thinking about?
 Not sure.
 
 What you do to me? What you do to me?
+</pre>
 
 ### 12. niche
 
+<img src="assets/affection/13.asphyxiate.webp" class="img-asphyxiate" />
+
+<pre class="poem">
 And the unnamed become text,
 become word, become mouth,
 become many texts,
@@ -177,9 +263,13 @@ diluted by those higher up the ladder.
 From the mud, we shriek at the heavens,
 shouting chemicals chemicals chemicals!
 and everything human and lower.
+</pre>
 
 ### 13. asphyxiate
 
+<img src="assets/affection/12.niche.webp" class="img-niche" />
+
+<pre class="poem">
 Another dull, dingy, dirty, very disturbing and disgusting day in Disturbia.
 
 I just turned the corner and look at this cloud,
@@ -218,9 +308,13 @@ Look at this thing now it's breaking up, you see that?
 
 We are being asphyxiated.
 Oxygen depletion is creation's deletion.
+</pre>
 
 ### 14. Asphyxiation
 
+<img src="assets/affection/15.2.spiral.webp" class="img-spiral-2" />
+
+<pre class="poem">
 He walks.
 Say we need to talk,
 
@@ -238,9 +332,15 @@ Would I stay up with you all night,
 when I'd know how to save a life?
 
 Pray to God he kills you, and I pray to God he kills you.
+</pre>
+
+<img src="assets/affection/15.1.spiral.webp" class="img-spiral-1" />
 
 ### 15. spiral
 
+<img src="assets/affection/15.0.spiral.webp" class="img-spiral-0" />
+
+<pre class="poem">
 And after every spiral, after every drift of the spirit,
 we are returned to that same point.
 
@@ -272,19 +372,31 @@ and the soot in the corner of my room becomes apparent
 and the confusion takes hold.
 
 With some holy terror.
+</pre>
 
 ### 16. Confrontation
 
+<img src="assets/affection/16.0.confrontation.webp" class="img-confront" />
+
+<pre class="poem">
 I know baby I know. 100. 44. Thousand! With their fall-. 100. 44. Thousand! With their fallacy! And their waters down, and breathe, and the music starving. I love you. I fucking love you, I fucking love you! See me move this way, it will be okay stay with me. I'll pick you up. I know baby it hurts. Please.
+</pre>
 
 ### 17. Affection
 
+<img src="assets/affection/17.affection.webp" class="img-affection" />
+
+<pre class="poem">
 My love are those bad thoughts still plaguing your mind?
 Are you still overcome with anxieties?
 Oh no, I understand, simple physical affections cannot help.
+</pre>
 
 ### 18. and then
 
+<img src="assets/affection/18.the-point.webp" class="img-andthen" />
+
+<pre class="poem">
 I've been having so many dreams, all violent.
 I crashed my car with Alex, both ejected out the seats.
 And we landed on some grey cliff all bloody and busted and it's sunset,
@@ -303,3 +415,4 @@ and I cried and passed out from blood loss.
 And I woke up with a sort of ecstasy,
 and I saw the words "I love you" shoved up against the corner,
 and I finally remembered the point.
+</pre>

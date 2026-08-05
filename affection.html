@@ -27,15 +27,64 @@
                     <a href="live.html">live</a>
                 </div>
             </div>
-            <a class="" href="contact.html"
-                >Contact</a
-            >
             <a class="" href="cv.html">CV</a>
         </div>
         <div id="content">
             <div class="flex-container"><h1 class="center"
 id="affection">Affection</h1>
-<iframe class="w-50" style="border: 0; aspect-ratio: 1 / 1; height: auto;" src="https://bandcamp.com/EmbeddedPlayer/album=26854996/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/transparent=true/" seamless>
+<style>
+    /* Per-iframe widths. Adjust each variable to resize that embed.
+       The mobile media query scales them up on small screens. */
+    :root {
+        --bandcamp-w: 60%;
+        --youtube-w: 80%;
+    }
+    @media (max-width: 480px) {
+        :root {
+            --bandcamp-w: 80%;
+            --youtube-w: 95%;
+        }
+    }
+
+    /* Margin-scattered images. Each lyric image gets its own class so it
+       can be positioned independently. All are tuned for desktop; the
+       media query below resets them to full-width centered blocks on
+       small screens so nothing breaks on mobile. */
+    .img-toil      { float: right; width: 45%; aspect-ratio: 300 / 600; margin: -2em 0 0 -1.25em; }
+    .img-rejoice   { display: block; width: 85%; margin: 0 auto; }
+    .img-participate{ float: right; width: 45%; aspect-ratio: 300 / 475; margin: -3em 0 0 0; }
+    .img-collapse  { float: right; width: 45%; aspect-ratio: 1 / 1; margin: -3em 0 0 0; }
+    .img-ego       { display: block; width: 50%; margin: 0 auto; }
+    .img-everyone  { display: block; width: 60%; margin: 0 auto; }
+    .img-mutuals   { float: right; width: 45%; aspect-ratio: 100 / 285; margin: -2em 0 0 0; }
+    .img-niche     { float: right; width: 45%; aspect-ratio: 100 / 250; margin: -2em 0 0 0; }
+    .img-asphyxiate{ float: right; width: 65%; aspect-ratio: 100 / 60; margin: 0.5em 1.5em 1em 0; }
+    .img-spiral-0    { float: right; width: 45%; aspect-ratio: 100 / 200; margin: 0em 0 0em 0em; position: relative; z-index: 2; }
+    .img-spiral-1    { width: 45%; margin: 0em auto; }
+    .img-spiral-2    { float: right; width: 45%; margin: 3em 0 0 0; }
+    .img-confront  { float: right; width: 45%; aspect-ratio: 75 / 50; margin: -6em 0 0 0; }
+     .img-confront-1  { float: right; width: 45%; aspect-ratio: 100 / 175; margin: -6em 0 0 0; }
+    .img-affection { width: 50%; margin: 0.5em 0 1em 1.5em; }
+    .img-andthen   { width: 50%; margin: 0.5em 1.5em 1em 0; }
+    .img-cd   { display: block; width: 80%; margin: 0em auto; }
+
+
+    /* On small screens there are no margins to scatter into, so every
+       image becomes a full-width, centered, stacked block. */
+    @media (max-width: 480px) {
+        .img-toil, .img-rejoice, .img-participate, .img-collapse,
+        .img-ego, .img-everyone, .img-mutuals, .img-niche,
+        .img-asphyxiate, .img-spiral-2, .img-spiral-1, .img-spiral-0, .img-confront, .img-confront-1, .img-affection, .img-andthen, .img-cd {
+            float: none;
+            display: block;
+            width: 100%;
+            max-width: 100%;
+            aspect-ratio: auto;
+            margin: 1em auto;
+        }
+    }
+</style>
+<iframe style="border: 0; aspect-ratio: 1 / 1; height: auto; width: var(--bandcamp-w); display: block; margin: 0 auto 1em auto;" src="https://bandcamp.com/EmbeddedPlayer/album=26854996/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/transparent=true/" seamless>
 <a href="https://jckl.bandcamp.com/album/affection">Affection by Jack
 Kilgore</a>
 </iframe>
@@ -55,170 +104,315 @@ in the Anthropocene.</p>
 href="https://nickayresdemasi.substack.com/i/193542154/jack-kilgore-affection"
 target="_blank" rel="noopener noreferrer">Nick Ayres Demasi</a></p>
 </blockquote>
-<iframe class="w-80" style="aspect-ratio: 16 / 9; border: 0; margin-bottom: 1em" src="https://www.youtube.com/embed/tEMwsyhE-Rc" title="Affection" frameborder="0" allowfullscreen>
+<iframe style="aspect-ratio: 16 / 9; border: 0; width: var(--youtube-w); display: block; margin: 0 auto 1em auto;" src="https://www.youtube.com/embed/tEMwsyhE-Rc" title="Affection" frameborder="0" allowfullscreen>
 </iframe>
 <h2 class="center" id="lyrics">Lyrics</h2>
 <h3 id="the-point">1. the point</h3>
-<p>And from the endless chatter, I come to myself in an empty room.</p>
-<p>I’ve lost sight of the point.</p>
+<p><img src="assets/affection/3.toil.webp" class="img-toil" /></p>
+<pre class="poem">
+And from the endless chatter, 
+I come to myself in an empty room.
+
+I've lost sight of the point.
+</pre>
 <h3 id="bread">2. Bread</h3>
-<p>Why are you afraid? Why are you afraid of saying something? Why are
-you afraid of sex? Why are you afraid of crying? Why are you afraid of
-elation? Why are you afraid of the point? Why are you afraid?</p>
+<pre class="poem">
+Why are you afraid?
+Why are you afraid of saying something?
+Why are you afraid of sex?
+Why are you afraid of crying?
+Why are you afraid of elation?
+Why are you afraid of the point?
+Why are you afraid?
+</pre>
 <h3 id="toil">3. toil</h3>
-<p>And the fear of the unnameable, leads us higher up the ladder.</p>
-<p>With delusions of grandeur we toil over sculpture and system,
-declaring this is the world! This is the world! And with fervor we build
-atop, we build atop! And we build and build and build and tell them to
-build and tell you to build and tell the next ones to build.</p>
-<p>But we look back, and we forget why we’ve built. But we’ve built and
-this is true, so it must be good, so we continue to build.</p>
-<p>And our great ladder reaches higher and higher into the pit.</p>
+<pre class="poem">
+And the fear of the unnameable, leads us higher up the ladder.
+
+With delusions of grandeur we toil over sculpture and system,
+declaring this is the world! This is the world!
+And with fervor we build atop, we build atop!
+And we build and build and build and tell them to build
+and tell you to build and tell the next ones to build.
+
+But we look back, and we forget why we've built.
+But we've built and this is true, so it must be good, so we continue to build.
+
+And our great ladder reaches higher and higher into the pit.
+</pre>
 <h3 id="rejoice">4. Rejoice</h3>
-<p>[None]</p>
+<p><img src="assets/affection/4.rejoice.webp" class="img-rejoice" /></p>
 <h3 id="participate">5. Participate</h3>
-<p>I can participate. I can participate. I can participate. I will
-participate. I will participate. I will participate and entangle myself!
-Entangled in participate and I love to participate and join in and find
-someone special, find something special. To make a habit out of it, to
-find something special, to find someone special. To participate, to
-participate, to dedicate ourselves to participate.</p>
-<p>And we’ll toil up the ladder. We’ll find that elation, that elation
-that’s blasted up towards the sky, the walls, the loving room, the fury
-of pure momentum. Pure ascensions, pure participate.</p>
-<p>I am a part of something and I’ve finally found love.</p>
+<p><img src="assets/affection/5.participate.webp" class="img-participate" /></p>
+<pre class="poem">
+I can participate.
+I can participate.
+I can participate.
+I will participate. I will participate.
+I will participate and entangle myself!
+Entangled in participate and I love to participate and join in
+and find someone special, find something special.
+To make a habit out of it,
+to find something special,
+to find someone special.
+To participate, to participate,
+to dedicate ourselves to participate.
+
+And we'll toil up the ladder.
+We'll find that elation,
+that elation that's blasted up towards the sky,
+the walls, the loving room,
+the fury of pure momentum.
+Pure ascensions, pure participate.
+
+I am a part of something and I've finally found love.
+</pre>
 <h3 id="i-love-you-through-hiccups">6. I love you through hiccups</h3>
-<p>A: A long time ago we stood right here in this spot. And you said
-something you remember what you said?</p>
-<p>B: No, maybe?</p>
-<p>A: When you looked at the temple what did you say?</p>
-<p>B: Said I’m going there someday?</p>
-<p>A: And what did I say?</p>
-<p>B: That I’m not.</p>
-<p>A: But now I want to take you there. Like I’ve said, you’ve been the
-love of my life I care about you so much. I can’t imagine my life
-without you. I want you in my life forever, okay?</p>
-<p>B: Sister of life.</p>
-<p>A: I have something for you. [Name]. Will you make me the happiest
-man in the world? And mar-</p>
+<p><img src="assets/affection/16.1.confrontation.webp" class="img-confront-1" /></p>
+<pre class="poem">
+A: A long time ago we stood right here in this spot.
+And you said something you remember what you said?
+
+B: No, maybe?
+
+A: When you looked at the temple what did you say?
+
+B: Said I'm going there someday?
+
+A: And what did I say?
+
+B: That I'm not.
+
+A: But now I want to take you there.
+Like I've said, you've been the love of my life I care about you so much.
+I can't imagine my life without you.
+I want you in my life forever, okay?
+
+B: Sister of life.
+
+A: I have something for you. [Name].
+Will you make me the happiest man in the world?
+And mar-
+</pre>
 <h3 id="collapse">7. collapse</h3>
-<p>And the plastic skeletons of our abstractions they fall apart, they
-fall apart, and our dreams, fallen apart, become fake become free, and
-we watch everything fall apart.</p>
-<p>And those objects of pure imaginings fall apart, they fall apart, and
-they land on 16 billion transistors fall apart. And those objects start
-to look like people fallen apart. A collage of hypertext, plaintext,
-images, and videos.</p>
-<p>I think I love them?</p>
+<p><img src="assets/affection/7.collapse.webp" class="img-collapse" /></p>
+<pre class="poem">
+And the plastic skeletons of our abstractions 
+they fall apart, they fall apart,
+and our dreams, fallen apart, become fake become free,
+and we watch everything fall apart.
+
+And those objects of pure imaginings fall apart,
+they fall apart, and they land on 16 billion transistors fall apart.
+And those objects start to look like people fallen apart.
+A collage of hypertext, plaintext, images, and videos.
+
+I think I love them?
+</pre>
 <h3 id="ego">8. Ego</h3>
-<p>I love my friends and my friends love me.</p>
+<p><img src="assets/affection/8.ego.webp" class="img-ego" /></p>
 <h3 id="special">9. Special</h3>
-<p>I think we got something special. we try. WE TRY</p>
+<pre class="poem">
+I think we got something special. we try. WE TRY
+</pre>
 <h3 id="i-thought-i-could-be-everyone">10. i thought i could be
 everyone</h3>
-<p>I thought I could be everyone.</p>
+<p><img src="assets/affection/10.ithoughticouldbeeveryone.webp" class="img-everyone" /></p>
 <h3 id="mutuals">11. Mutuals</h3>
-<p>A: Now Lisa just started following my Instagram.</p>
-<p>B: I usually follow people pretty quickly.</p>
-<p>C: I followed you the day I met you.</p>
-<p>A: I know that was so cute. I followed you back the day I met
-you.</p>
-<p>Voice it’s my disguise, I’m by your side. What you do to me? So
-pretty, yes, you do. What you do to me?</p>
-<p>whotookmichael: follow for follow, did it happen?</p>
-<p>jckl: I think so, mutual affection in our follow for follow. As the
-Venn diagram of our media consumption converges towards a circle we fall
-more and more in love.</p>
-<p>We have the same eyes now. We have the same ears now. Surrounded by
-birds, frogs, and people, I block them out for you. I block them out
-knowing we share an information flow. I give up my immediate replacing
-dirt, skin, grass with glass, replacing 10,000 speakers with 2,
-replacing white light with blue. I reduce the world so I can be with
-you.</p>
-<p>lol, I’m crying right now, walking by people I know, not answering,
-ears plugged up I’m thinking about the idea of you, or is it just me I’m
-thinking about? Not sure.</p>
-<p>What you do to me? What you do to me?</p>
+<p><img src="assets/affection/11.mutuals.webp" class="img-mutuals" /></p>
+<pre class="poem">
+A: Now Lisa just started following my Instagram.
+
+B: I usually follow people pretty quickly.
+
+C: I followed you the day I met you.
+
+A: I know that was so cute.
+I followed you back the day I met you.
+
+Voice it's my disguise, I'm by your side.
+What you do to me?
+So pretty, yes, you do.
+What you do to me?
+
+whotookmichael: follow for follow, did it happen?
+
+jckl: I think so, mutual affection in our follow for follow.
+As the Venn diagram of our media consumption 
+converges towards a circle
+we fall more and more in love.
+
+We have the same eyes now.
+We have the same ears now.
+Surrounded by birds, frogs, and people, 
+I block them out for you.
+I block them out knowing we share an information flow.
+I give up my immediate replacing dirt, skin,
+grass with glass,
+replacing 10,000 speakers with 2,
+replacing white light with blue.
+I reduce the world so I can be with you.
+
+lol, I'm crying right now,
+walking by people I know,
+not answering,
+ears plugged up I'm thinking about the idea of you,
+or is it just me I'm thinking about?
+Not sure.
+
+What you do to me? What you do to me?
+</pre>
 <h3 id="niche">12. niche</h3>
-<p>And the unnamed become text, become word, become mouth, become many
-texts, many words, many mouths, become the word become us.</p>
-<p>And this unnamed, once so exalted, sinks into stereotype, diluted by
-those higher up the ladder.</p>
-<p>From the mud, we shriek at the heavens, shouting chemicals chemicals
-chemicals! and everything human and lower.</p>
+<p><img src="assets/affection/13.asphyxiate.webp" class="img-asphyxiate" /></p>
+<pre class="poem">
+And the unnamed become text,
+become word, become mouth,
+become many texts,
+many words, many mouths,
+become the word
+become us.
+
+And this unnamed, once so exalted,
+sinks into stereotype,
+diluted by those higher up the ladder.
+
+From the mud, we shriek at the heavens,
+shouting chemicals chemicals chemicals!
+and everything human and lower.
+</pre>
 <h3 id="asphyxiate">13. asphyxiate</h3>
-<p>Another dull, dingy, dirty, very disturbing and disgusting day in
-Disturbia.</p>
-<p>I just turned the corner and look at this cloud, it looks like it’s
-falling down. Whenever we have real clouds in the sky, like here, you
-can really see some strange phenomena going on.</p>
-<p>They don’t want us to know the truth they don’t want us to have the
-benefit of the truth. Look at this swirl beyond there.</p>
-<p>I never until about, maybe, 10 years ago, I saw 2 3 4 layers, of
-clouds in the sky. This white plaster that’s stuck to the sky. Take a
-look, this is a vestige of a real cloud that was attacked. Normally the
-sun can shine through this, if it were a real cloud, but it cannot shine
-through that metal plate. Remember when the sun used to cast shadows of
-clouds on the ground? You’re never going to see that anymore, ever.</p>
-<p>There’s a real plane up there flying flush to the ground, at least
-that’s what it looks like God knows.</p>
-<p>Take a look at this seam here opening up. Oh I could go on and on;
-just take a look at the sky back here compared to over here.</p>
-<p>It just doesn’t make sense; it’s lawless, and that’s how we know that
-it is not natural, it is not… nothing is continuous, nothing is
-contiguous, nothing is congruous.</p>
-<p>Look at this thing now it’s breaking up, you see that?</p>
-<p>We are being asphyxiated. Oxygen depletion is creation’s
-deletion.</p>
+<p><img src="assets/affection/12.niche.webp" class="img-niche" /></p>
+<pre class="poem">
+Another dull, dingy, dirty, very disturbing and disgusting day in Disturbia.
+
+I just turned the corner and look at this cloud,
+it looks like it's falling down.
+Whenever we have real clouds in the sky, like here,
+you can really see some strange phenomena going on.
+
+They don't want us to know the truth
+they don't want us to have the benefit of the truth.
+Look at this swirl beyond there.
+
+I never until about, maybe, 10 years ago,
+I saw 2 3 4 layers, of clouds in the sky.
+This white plaster that's stuck to the sky.
+Take a look, this is a vestige of a real cloud that was attacked.
+Normally the sun can shine through this, if it were a real cloud,
+but it cannot shine through that metal plate.
+Remember when the sun used to cast shadows of clouds on the ground?
+You're never going to see that anymore, ever.
+
+There's a real plane up there flying flush to the ground,
+at least that's what it looks like God knows.
+
+Take a look at this seam here opening up.
+Oh I could go on and on;
+just take a look at the sky back here compared to over here.
+
+It just doesn't make sense;
+it's lawless,
+and that's how we know that it is not natural, it is not...
+nothing is continuous,
+nothing is contiguous,
+nothing is congruous.
+
+Look at this thing now it's breaking up, you see that?
+
+We are being asphyxiated.
+Oxygen depletion is creation's deletion.
+</pre>
 <h3 id="asphyxiation">14. Asphyxiation</h3>
-<p>He walks. Say we need to talk,</p>
-<p>he walks. You say sit down. You stare politely right on through.</p>
-<p>Some sort of window to your eye. She goes left and you stay right.
-Fear and blame. You begin to open, why’d you came? Where did I go wrong?
-I lost a friend somewhere along in the bitterness end. Would I stay up
-with you all night, when I’d know how to save a life?</p>
-<p>Pray to God he kills you, and I pray to God he kills you.</p>
+<p><img src="assets/affection/15.2.spiral.webp" class="img-spiral-2" /></p>
+<pre class="poem">
+He walks.
+Say we need to talk,
+
+he walks.
+You say sit down.
+You stare politely right on through.
+
+Some sort of window to your eye.
+She goes left and you stay right.
+Fear and blame.
+You begin to open, why'd you came?
+Where did I go wrong?
+I lost a friend somewhere along in the bitterness end.
+Would I stay up with you all night,
+when I'd know how to save a life?
+
+Pray to God he kills you, and I pray to God he kills you.
+</pre>
+<p><img src="assets/affection/15.1.spiral.webp" class="img-spiral-1" /></p>
 <h3 id="spiral">15. spiral</h3>
-<p>And after every spiral, after every drift of the spirit, we are
-returned to that same point.</p>
-<p>We are obligated, we beg and plead to be shown anything but that. We
-search for pockets of delusions, we rest in the focus of a lunatic. We
-grasp at symbols and bodies so feeble, so lovely, good enough to keep
-ourselves busy, to avoid the point.</p>
-<p>But I’ve come up empty and it’s starting to stink.</p>
-<p>And in moments of rest the filth is known, the tinnitus comes in, the
-frogs overwhelm and the point is made… and I’m scared again.</p>
-<p>Bread is a joke. And these affections so flimsy these exertions so
-aimless the rejoicing becomes empty and everything spills out into the
-pit. And it stops looking so special, it stops looking so careful, so
-pretty, and our peace gives way and the soot in the corner of my room
-becomes apparent and the confusion takes hold.</p>
-<p>With some holy terror.</p>
+<p><img src="assets/affection/15.0.spiral.webp" class="img-spiral-0" /></p>
+<pre class="poem">
+And after every spiral, after every drift of the spirit,
+we are returned to that same point.
+
+We are obligated,
+we beg and plead to be shown anything but that.
+We search for pockets of delusions,
+we rest in the focus of a lunatic.
+We grasp at symbols and bodies so feeble, so lovely,
+good enough to keep ourselves busy,
+to avoid the point.
+
+But I've come up empty and it's starting to stink.
+
+And in moments of rest the filth is known,
+the tinnitus comes in,
+the frogs overwhelm
+and the point is made...
+and I'm scared again.
+
+Bread is a joke.
+And these affections so flimsy
+these exertions so aimless
+the rejoicing becomes empty
+and everything spills out into the pit.
+And it stops looking so special,
+it stops looking so careful, so pretty,
+and our peace gives way
+and the soot in the corner of my room becomes apparent
+and the confusion takes hold.
+
+With some holy terror.
+</pre>
 <h3 id="confrontation">16. Confrontation</h3>
-<p>I know baby I know. 100. 44. Thousand! With their fall-. 100. 44.
-Thousand! With their fallacy! And their waters down, and breathe, and
-the music starving. I love you. I fucking love you, I fucking love you!
-See me move this way, it will be okay stay with me. I’ll pick you up. I
-know baby it hurts. Please.</p>
+<p><img src="assets/affection/16.0.confrontation.webp" class="img-confront" /></p>
+<pre class="poem">
+I know baby I know. 100. 44. Thousand! With their fall-. 100. 44. Thousand! With their fallacy! And their waters down, and breathe, and the music starving. I love you. I fucking love you, I fucking love you! See me move this way, it will be okay stay with me. I'll pick you up. I know baby it hurts. Please.
+</pre>
 <h3 id="affection-1">17. Affection</h3>
-<p>My love are those bad thoughts still plaguing your mind? Are you
-still overcome with anxieties? Oh no, I understand, simple physical
-affections cannot help.</p>
+<p><img src="assets/affection/17.affection.webp" class="img-affection" /></p>
+<pre class="poem">
+My love are those bad thoughts still plaguing your mind?
+Are you still overcome with anxieties?
+Oh no, I understand, simple physical affections cannot help.
+</pre>
 <h3 id="and-then">18. and then</h3>
-<p>I’ve been having so many dreams, all violent. I crashed my car with
-Alex, both ejected out the seats. And we landed on some grey cliff all
-bloody and busted and it’s sunset, and then we started to feel the
-presence and it’s so pretty, and it would be nice to die pretty and in
-good company.</p>
-<p>And we shouted towards the sea, “I’m seeing this repetition this
-perfect repetition and I’ve done this dream thousands of times.
-Thousands of times I get to have this feeling thousands of times, I’m so
-lucky.”</p>
-<p>And then the sun went down, and the darkness came on, and I cried and
-passed out from blood loss.</p>
-<p>And I woke up with a sort of ecstasy, and I saw the words “I love
-you” shoved up against the corner, and I finally remembered the
-point.</p></div>
+<p><img src="assets/affection/18.the-point.webp" class="img-andthen" /></p>
+<pre class="poem">
+I've been having so many dreams, all violent.
+I crashed my car with Alex, both ejected out the seats.
+And we landed on some grey cliff all bloody and busted and it's sunset,
+and then we started to feel the presence and it's so pretty,
+and it would be nice to die pretty and in good company.
+
+And we shouted towards the sea,
+"I'm seeing this repetition this perfect repetition
+and I've done this dream thousands of times.
+Thousands of times I get to have this feeling thousands of times, I'm so lucky."
+
+And then the sun went down,
+and the darkness came on,
+and I cried and passed out from blood loss.
+
+And I woke up with a sort of ecstasy,
+and I saw the words "I love you" shoved up against the corner,
+and I finally remembered the point.
+</pre></div>
         </div>
         <div id="footer"></div>
     </body>

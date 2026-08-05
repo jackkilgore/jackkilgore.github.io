@@ -19,7 +19,6 @@ build_page() {
     case "$name" in
         cv)      active="cv=true" ;;
         index)   active="home=true" ;;
-        contact) active="contact=true" ;;
         affection) active="works=true" ;;
         new)     active="works=true" ;;
         emission_control_2) active="works=true" ;;

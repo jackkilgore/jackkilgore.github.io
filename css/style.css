@@ -110,10 +110,16 @@ html {
     overflow-x: hidden; /* Safety net against horizontal page overflow */
 }
 
-/* Main Flex Container centered on screen */
+/* Main Flex Container centered on screen.
+   NOTE: this is a plain block container (not flex) so that floated
+   images can have following paragraphs wrap around them. The .cv
+   sections inside are flex themselves, and centered images/iframes
+   use margin: 0 auto, so neither depends on this being flex.
+   position: relative makes it the positioning context for images
+   that are absolutely placed into the page margins (see Affection). */
 .flex-container {
-    display: flex;
-    flex-direction: column;
+    display: block;
+    position: relative;
     background-color: rgb(255, 255, 255);
 
     /* Responsive width bounds */
@@ -212,6 +218,21 @@ blockquote {
     line-height: 1.5;
 }
 
+/* Poetry / line-art: a block that preserves every line break and
+   blank line from the Markdown source, but keeps the site's font and
+   styling instead of the default monospace. The element must be <pre>
+   so pandoc passes it through verbatim (a <div> would collapse the
+   newlines); the class name is simply `poem`. */
+.poem {
+    font-family: "Nanum Myeongjo";
+    font-size: var(--base-font-size);
+    color: rgb(0, 0, 0);
+    line-height: 1.5;
+    white-space: pre-wrap; /* keep exact line breaks & blank lines, but wrap long lines */
+    margin: 0 0 1em 0;
+    padding: 0 5px;
+}
+
 blockquote p {
     padding: 0;
     font-style: italic;
@@ -263,6 +284,13 @@ img {
 .flex-container > p > img.w-100,
 .flex-container > iframe.w-100 {
     width: 100%;
+}
+
+/* Float an image to the right so following text wraps around it.
+   Overrides the centered margin from the base rule above. */
+.flex-container > p > img.float-right {
+    float: right;
+    margin: 0 0 1em 1em;
 }
 
 /* --------------------------------------------------
@@ -334,6 +362,14 @@ img {
     .flex-container > p > img.w-100,
     .flex-container > iframe.w-100 {
         width: 100%;
+    }
+
+    /* Un-float images on mobile so they stack centered instead of
+       wrapping text around them in a narrow column. */
+    .flex-container > p > img.float-right {
+        float: none;
+        display: block;
+        margin: 0 auto;
     }
 
     /* Nav: vw-based spacing collapses on narrow screens, so use fixed
