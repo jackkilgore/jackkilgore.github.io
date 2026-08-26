@@ -8,11 +8,59 @@ Music composition series studying the gap between computer and chamber music.
 
 :::
 
-## 1.2.0
+## 5.0.1
 
-_new_
+_big_
 
-<iframe class="w-80" style="aspect-ratio: 16 / 9; border: 0;" src="https://www.youtube.com/embed/lO6l2ZBrVCM" title="new - 1.2.0" frameborder="0" allowfullscreen></iframe>
+<iframe class="w-80" style="aspect-ratio: 16 / 9; border: 0;" src="https://www.youtube.com/embed/lr0i0iaxLk0" title="new - 5.0.1" frameborder="0" allowfullscreen></iframe>
+
+## 4.1.0
+
+_to be small !_
+
+<iframe class="w-80" style="aspect-ratio: 16 / 9; border: 0;" src="https://www.youtube.com/embed/1oTWakKDoVM" title="new - 4.1.0" frameborder="0" allowfullscreen></iframe>
+
+### 4.1.0 - Changelog
+
+_4.0.1-4.0.6_
+
+- 63 bpm
+- c major kind of
+- articulations in highest octave, used as counterpoint
+- used for peaking before center reprise
+- reprise in the center
+- wavetable sync phrases in second half
+- chord progressions in second half for peaking
+- hand draw pitch curves to add drift for notes in vocal range
+- introduce sustained sub in second half
+- sustained note pitch curved through entire sections for comedown
+- new-2 tone ramps for stitching phrases together
+- noise layer with stutter bypass phrasing
+
+### 4.0.3 - Changelog
+
+- to bend towards others!
+- to dance across the noise!
+- to stutter!
+- 79 bpm
+
+## 3.1.0
+
+_helicopter_
+
+<iframe class="w-80" style="aspect-ratio: 16 / 9; border: 0;" src="https://www.youtube.com/embed/HX-9Px_v5zo" title="new - 3.1.0" frameborder="0" allowfullscreen></iframe>
+
+### 3.1.0 - Changelog
+
+_3.0.1-3.0.3_
+
+- two pitch shifting lead voices, one voice delayed by half a phrase for interlocked effect
+- one arpeggiated voice per lead voice. single step arp for first half of the piece, two step/three step arps for second half of the piece
+- two voices for bass and tonal steadiness
+- interlocking panning phrases on arpeggiated voices
+- helicopter bass phrasing on arpeggiated voices
+- 49 bpm
+- limiter POST
 
 ## 2.3.0
 
@@ -51,50 +99,8 @@ _2.2.1-2.2.3_
 - volume boost mid beeps
 - outro
 
-## 3.1.0
+## 1.2.0
 
-_helicopter_
+_new_
 
-<iframe class="w-80" style="aspect-ratio: 16 / 9; border: 0;" src="https://www.youtube.com/embed/HX-9Px_v5zo" title="new - 3.1.0" frameborder="0" allowfullscreen></iframe>
-
-### 3.1.0 - Changelog
-
-_3.0.1-3.0.3_
-
-- two pitch shifting lead voices, one voice delayed by half a phrase for interlocked effect
-- one arpeggiated voice per lead voice. single step arp for first half of the piece, two step/three step arps for second half of the piece
-- two voices for bass and tonal steadiness
-- interlocking panning phrases on arpeggiated voices
-- helicopter bass phrasing on arpeggiated voices
-- 49 bpm
-- limiter POST
-
-## 4.1.0
-
-_to be small !_
-
-<iframe class="w-80" style="aspect-ratio: 16 / 9; border: 0;" src="https://www.youtube.com/embed/1oTWakKDoVM" title="new - 4.1.0" frameborder="0" allowfullscreen></iframe>
-
-### 4.1.0 - Changelog
-
-_4.0.1-4.0.6_
-
-- 63 bpm
-- c major kind of
-- articulations in highest octave, used as counterpoint
-- used for peaking before center reprise
-- reprise in the center
-- wavetable sync phrases in second half
-- chord progressions in second half for peaking
-- hand draw pitch curves to add drift for notes in vocal range
-- introduce sustained sub in second half
-- sustained note pitch curved through entire sections for comedown
-- new-2 tone ramps for stitching phrases together
-- noise layer with stutter bypass phrasing
-
-### 4.0.3 - Changelog
-
-- to bend towards others!
-- to dance across the noise!
-- to stutter!
-- 79 bpm
+<iframe class="w-80" style="aspect-ratio: 16 / 9; border: 0;" src="https://www.youtube.com/embed/lO6l2ZBrVCM" title="new - 1.2.0" frameborder="0" allowfullscreen></iframe>
