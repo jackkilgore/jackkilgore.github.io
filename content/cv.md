@@ -7,24 +7,24 @@ Lunacy Audio
 
 _Creative DSP Engineer and Programmer_
 
-- Creative real-time DSP engineer for designing and implementing professional-grade audio effects. Specialties include but are not limited to: reverb, distortion, resonators, filter banks, granulators, and pitch shifters. See: <https://lunacy.audio/products/beam/>.
-- Lead designer of filter-bank resonator: [Bismuth](https://lunacy.audio/products/bismuth/) in collaboration with Virtual Riot.
+- Creative real-time DSP engineer for designing and implementing professional grade audio effects. Specialties include but are not limited to: reverb, distortion, resonators, filter banks, granulators, and pitch shifters. See: <https://lunacy.audio/products/beam/>.
+- Lead designer of filter bank resonator: [Bismuth](https://lunacy.audio/products/bismuth/) in collaboration with Virtual Riot.
 - Lead designer of chorus effect: [Haze](https://lunacy.audio/products/haze/).
 - Co-lead designer of multi-tap delay: [Taps](https://lunacy.audio/products/tapsandportals/) in collaboration with Benn Jordan.
 - Co-lead designer of multi-distortion effect: [Volt](https://lunacy.audio/products/volt/).
 - Co-lead designer of buffer shuffler effect: [Time](https://lunacy.audio/products/time/).
 - Real-time programming in C++.
 - Continuous integration pipeline for building and codesigning Windows and Mac installers.
-- General software engineering: architecture-design, optimization, git/github, etc.
+- General software engineering: architecture and design, optimization, Git/GitHub, etc.
 
 Emission Control 2
 : 2019 - 2023
 
-_Open Source Granular Synthesizer with Curtis Roads and Rodney DuPlessis_
+_Open-Source Granular Synthesizer with Curtis Roads and Rodney DuPlessis_
 
 - Head software developer and designer
 - [Software download](https://github.com/EmissionControl2/EmissionControl2/releases)
-- [MIT Press: Computer Music Journal 45:3:Architecture for Real-Time Granular Synthesis With Per-Grain Processing: EmissionControl2.](https://direct.mit.edu/comj/issue/45/3)
+- [MIT Press: Computer Music Journal 45:3: Architecture for Real-Time Granular Synthesis With Per-Grain Processing: EmissionControl2.](https://direct.mit.edu/comj/issue/45/3)
 - [Source code and manual](https://github.com/EmissionControl2/EmissionControl2)
 
 Affection
@@ -41,7 +41,7 @@ A Special Mystic Joy
 
 _Music Software in Collaboration with Trevor Treglia_
 
-- Trevor Treglia composed a piece titled "A Special Mystic Joy" that employs frequency-dependent loopers . I was tasked with designing a piece of software for enabling the performance of the composition in real-time.
+- Trevor Treglia composed a piece titled "A Special Mystic Joy" that employs frequency dependent loopers. I was tasked with designing a piece of software for enabling the performance of the composition in real-time.
 
 ## EDUCATION {.center}
 
@@ -49,27 +49,28 @@ University of California: Santa Barbara
 : 2021 - 2023
 
 Department of Media Arts and Technology\
-Masters of Science
+Master of Science
 
 University of California: Santa Barbara
 : 2017 - 2021
 
 Department of Computer Science\
-Bachelors of Science\
+Bachelor of Science\
 [UCSB Chancellor's Award for Excellence in Undergraduate Research (Engineering)](https://engineering.ucsb.edu/news/granular-accomplishments)
 
 ## TECHNICAL STRENGTHS AND TOOLS {.center}
 
-- Cross-platform, real-time programming and signal processing
-- Software engineering and architecture for maintaining professional-grade systems
-- Git + Github power user
-- Low-level knowledge on how to make computers run as fast as possible (profiler tooling, cache behavior, memory management, approximations, etc)
-- Building cross-platform installers and continuous integration
-- Deep listening and professional audio mixing
-- Live performance and composition of computer music
-- Programming languages: C++, Python, Javascript
-- High level applications: Ableton, Reaper, Adobe products, Davinci Resolve
-- Defensive and careful use of LLM tooling
+- Digital signal processing: convolution, Fourier analysis, filter design, spectral analysis, physical modeling.
+- High performance real-time programming in C++. Fast, low latency code that meets hard deadlines: fixed execution budgets, cache aware memory layout, profiling, and approximation with known error bounds.
+- Professional, maintainable code: clear naming and structure, consistent conventions, and documented intent.
+- Git + GitHub power user: branching, rebasing, and code review.
+- Formally correct code: explicit invariants, careful edge case and boundary handling, and numerical error analysis, so behavior can be verified rather than assumed.
+- Reproducible builds and continuous integration.
+- Deep listening and professional audio mixing.
+- Live performance and composition of computer music.
+- Programming languages: C++, Python, JavaScript.
+- High level applications: Ableton, Reaper, Adobe products, DaVinci Resolve.
+- Defensive and careful use of LLM tooling.
 
 ## SECONDARY EXPERIENCE {.center}
 
@@ -93,7 +94,7 @@ Eagle Scout
 
 _Award_
 
-- Planned and coordinated a community service event for a local community center. Landscaped and cleaned up the lawn for the community events (AA meetings, daycare,etc.)
+- Planned and coordinated a community service event for a local community center. Landscaped and cleaned up the lawn for the community events (AA meetings, daycare, etc.)
 - Throughout my time as scout, I led multiple groups of people in wilderness training.
 
 new
@@ -124,7 +125,7 @@ Crest
 
 _Music_
 
-- A series of free music events in the Angeles Crest National Forest focusing on club music and real time deconstruction of club music.
+- A series of free music events in the Angeles Crest National Forest focusing on club music and real-time deconstruction of club music.
 - [Crest 1](https://www.instagram.com/p/Cg7hsyIv7bw/)
 - [Crest 2](https://www.youtube.com/watch?v=tvMNFHJ739g&ab_channel=jackkilgore)
 - [Crest 3](https://www.instagram.com/p/CpQkrDVPP54/)
