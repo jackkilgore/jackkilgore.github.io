@@ -1,0 +1,75 @@
+/* --------------------------------------------------
+   PRINT STYLESHEET (PDF export)
+   --------------------------------------------------
+   Loaded only by templates/print.html, which build_pdf.sh renders to PDF
+   via headless Chrome. It reuses css/style.css for all typography, then
+   flattens the on-screen layout (no nav, full page width) and adds
+   page-break rules. Nothing here affects the website. */
+
+@page {
+    size: letter;
+    margin: 0.75in;
+}
+
+/* The site's 18px base is tuned for the screen; a CV reads better a touch
+   smaller on paper, which also keeps entries from spilling onto extra pages. */
+:root {
+    --base-font-size: 15px;
+}
+
+/* On screen the content is a centered 900px column inside a flex page.
+   For print we want the full page width and no extra padding. */
+#content {
+    display: block;
+    padding-bottom: 0;
+    overflow: visible;
+}
+
+.flex-container {
+    width: 100%;
+    max-width: none;
+    margin: 0;
+}
+
+/* Header: name + contact line, centered above the CV body. */
+.cv-header {
+    text-align: center;
+    margin-bottom: 1.5em;
+}
+
+.cv-header h1 {
+    width: 100%;
+    margin: 0 0 0.25em 0;
+}
+
+.cv-header .cv-contact {
+    text-align: center;
+    font-size: calc(var(--base-font-size) * 0.9);
+    color: rgb(80, 80, 80);
+    margin: 0;
+}
+
+.cv-header .cv-contact a {
+    color: rgb(80, 80, 80);
+    text-decoration: none;
+}
+
+/* Keep a section heading with the entry that follows it, and keep a
+   title/date row and each bullet from splitting mid-line. Entries are
+   otherwise free to flow across a page boundary so pages fill up. */
+h2 {
+    break-after: avoid;
+}
+
+dl,
+li {
+    break-inside: avoid;
+}
+
+/* Each entry is wrapped in a block-level div by filters/entries.lua. This
+   gives the entry a normal block context: the inner <dl>'s width: 100%
+   resolves against the full column (so the date floats to the true right
+   edge), and the entry paginates predictably instead of as a flex item. */
+.entry {
+    width: 100%;
+}

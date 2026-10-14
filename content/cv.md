@@ -141,7 +141,7 @@ Frame Feedback with P5.js
 
 - Frame feedback system implemented using p5.js and WebGL
 - [code template for frame feedback](https://github.com/jackkilgore/pocket_spit/tree/template)
-- [example running in the browser](https://jackilgore.com/pocket_spit/)
+- [example running in the browser](https://jackkilgore.net/pocket_spit/)
 - [high resolution render](https://youtu.be/cpyD7RiVd08)
 - [artistic spin](https://youtu.be/WyVMfHbXiBE)
 

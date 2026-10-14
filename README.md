@@ -15,15 +15,28 @@ content/cv.md  ──┐
 templates/page.html ──┘
 ```
 
+## Dependencies
+
+| Tool                          | Needed for                           | Install                             |
+| ----------------------------- | ------------------------------------ | ----------------------------------- |
+| [pandoc](https://pandoc.org/) | both builds (Markdown → HTML)        | `brew install pandoc`               |
+| Google Chrome                 | PDF build only (headless HTML → PDF) | `brew install --cask google-chrome` |
+
+`build.sh` needs only pandoc. `build_pdf.sh` needs pandoc **and** Chrome.
+
 ## Layout
 
 ```
 content/          Markdown sources (one .md per page)
-templates/        pandoc HTML template (page shell: <head>, nav, footer)
+templates/        pandoc HTML templates (page shell + print/PDF shell)
+filters/          pandoc Lua filters (link targets, entry grouping)
 css/style.css     all styling
+css/print.css     print-only overrides for the PDF export
 assets/           images / media
 build.sh          converts content/*.md -> *.html at the repo root
+build_pdf.sh      renders a page to PDF in prints/ (Markdown -> HTML -> headless Chrome)
 *.html            generated output (commit these)
+prints/           generated PDFs (gitignored)
 ```
 
 ## Workflow: updating the site
@@ -41,7 +54,34 @@ build.sh          converts content/*.md -> *.html at the repo root
 3. **Preview** the generated HTML in a browser.
 4. **Commit** both the Markdown source _and_ the regenerated HTML.
 
-> Requires [pandoc](https://pandoc.org/) (`brew install pandoc`).
+## Building a PDF
+
+`build_pdf.sh` renders any page to a print-ready PDF. It reuses the same
+Markdown source and CSS as the website, so the PDF matches the site:
+
+```
+content/cv.md ──┐
+templates/print.html ──┼── pandoc ──> HTML ── headless Chrome ──> prints/jackkilgore-cv-<YYYYMM>.pdf
+css/style.css + css/print.css ──┘
+```
+
+```sh
+./build_pdf.sh                  # content/cv.md -> prints/jackkilgore-cv-<YYYYMM>.pdf
+./build_pdf.sh cv-engineering   # content/cv-engineering.md -> prints/jackkilgore-cv-engineering-<YYYYMM>.pdf
+```
+
+Output lands in `prints/` (gitignored) as `jackkilgore-<page>-<YYYYMM>.pdf`,
+where `<YYYYMM>` is the build date. Pass a second argument to override the
+output path.
+
+- `templates/print.html` is the PDF page shell. It adds a name/contact header
+  and loads `css/print.css` on top of the normal stylesheet.
+- `css/print.css` flattens the on-screen layout (no nav, full page width),
+  sets the page size/margins, and adds page-break rules. It never affects the
+  website.
+- `filters/entries.lua` wraps each CV entry (title/date row + subtitle +
+  bullets) in a single element, giving it a block context for correct date
+  alignment and predictable pagination. It is used only by `build_pdf.sh`.
 
 ## The header / navigation system
 

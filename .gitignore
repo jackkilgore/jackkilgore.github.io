@@ -1,2 +1,8 @@
 *.swp
 *.DS_Store
+
+# Generated PDFs (build_pdf.sh output)
+prints/
+
+# Temp files from build_pdf.sh
+.print-*
